@@ -2,6 +2,10 @@
 
 little script to convert a `text` file with song titles on each line to a folder with the corresponding `mp3s`
 
+the folder will be created inside the directory of the text file
+
+the song names will be converted by searching them up on youtube and then downloading as mp3 the corresponding audio. this is made possible by `yt-dlp` project which is linked in the `dependencies` subsection
+
 ## usage
 
 `src/txt2mp3.sh PATH`

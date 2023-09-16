@@ -9,8 +9,8 @@ else
     # saving the user input (the filepath)
     input="$1"
 
-    # making sure the script is running inside the project root directory
-    cd "$(dirname "$(dirname "$0")")"
+    # making sure the script is running inside the directory of the text file
+    cd "$(dirname "$1")"
 
     # creating "mp3s" directory if not already existing
     mkdir -p mp3s
