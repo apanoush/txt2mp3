@@ -6,13 +6,15 @@ if [ $# -eq 0 ]
 
 else
 
+    #input= "$(dirname "$1")"/"$1"
     input="$1"
 
-    mkdir mp3s
+    mkdir -p mp3s
     cd mp3s
 
     while read -r line
     do
-    yt-dlp --extract-audio --add-metadata --embed-thumbnail --audio-quality 0 --audio-format mp3 "$line"
-    done < "$input"
+    yt-dlp --extract-audio --add-metadata --embed-thumbnail --audio-quality 0 --default-search "ytsearch" --audio-format mp3 "$line"
+    done < "../$input"
 
+fi
