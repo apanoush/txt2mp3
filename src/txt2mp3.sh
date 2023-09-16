@@ -6,7 +6,8 @@ if [ $# -eq 0 ]
 
 else
     input="$1"
-    cd "$(dirname "$0")"
+
+    cd "$(dirname "$(dirname "$0")")"
 
     # creating "mp3s" directory if not already existing
     mkdir -p mp3s
