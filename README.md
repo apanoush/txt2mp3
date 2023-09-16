@@ -4,7 +4,7 @@ little script to convert a `text` file with song titles on each line to a folder
 
 ## usage
 
-`./txt2mp3.sh PATH`
+`src/txt2mp3.sh PATH`
 
 `PATH` is the text file path where are the song names to be converted
 
