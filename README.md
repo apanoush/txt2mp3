@@ -1,6 +1,6 @@
 # txt2mp3
 
-little script to convert a `text` file with song titles on each lines to a playlist of the corresponding `mp3s`
+little script to convert a `text` file with song titles on each line to a folder with the corresponding `mp3s`
 
 ## usage
 
