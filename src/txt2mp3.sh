@@ -5,10 +5,10 @@ if [ $# -eq 0 ]
 		echo Usage txt2mp3.sh PATH, where PATH is the txt file path
 
 else
-
-    #input= "$(dirname "$1")"/"$1"
     input="$1"
+    cd "$(dirname "$1")"
 
+    # creating "mp3s" directory if not already existing
     mkdir -p mp3s
     cd mp3s
 
