@@ -20,7 +20,6 @@ else
     while read -r line
     do
     # running yt-dlp to do the download part for us
-    yt-dlp --extract-audio --add-metadata --embed-thumbnail --audio-quality 0 --default-search "ytsearch" --audio-format mp3 "$line"
+    yt-dlp --extract-audio --add-metadata --embed-thumbnail --audio-quality 0 --default-search "ytsearch" -o "%(title)s.%(ext)s" --audio-format mp3 "$line"
     done < "../$input"
-
 fi
