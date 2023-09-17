@@ -9,8 +9,11 @@ else
     # saving the user input (the filepath)
     input="$1"
 
-    # making sure the script is running inside the directory of the text file
-    cd "$(dirname "$1")"
+    # making sure the script is running inside the directory of the text file and getting its absolute path
+    directory_path="$(dirname "$1")"
+    filename="$(basename "$1")"
+    absolute_path="$directory_path/$filename"
+    cd "$directory_path"
 
     # creating "mp3s" directory if not already existing
     mkdir -p mp3s
@@ -21,5 +24,5 @@ else
     do
     # running yt-dlp to do the download part for us
     yt-dlp --extract-audio --add-metadata --embed-thumbnail --audio-quality 0 --default-search "ytsearch" -o "%(title)s.%(ext)s" --audio-format mp3 "$line"
-    done < "../$input"
+    done < "$absolute_path"
 fi
