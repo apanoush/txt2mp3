@@ -3,7 +3,7 @@
 # if no argument is given the script stops
 if [ $# -eq 0 ]
 	then 
-		echo Usage txt2mp3.sh PATH, where PATH is the txt file path
+		echo Usage: $0 PATH, where PATH is the txt file path
 
 else
     # saving the user input (the filepath)
