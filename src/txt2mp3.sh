@@ -11,8 +11,7 @@ else
 
     # making sure the script is running inside the directory of the text file and getting its absolute path
     directory_path="$(dirname "$1")"
-    filename="$(basename "$1")"
-    absolute_path="$directory_path/$filename"
+    absolute_path="$directory_path/$(basename "$1")"
     cd "$directory_path"
 
     # creating "mp3s" directory if not already existing
